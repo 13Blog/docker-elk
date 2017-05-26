@@ -19,6 +19,7 @@ services:
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - /opt/nginx/logs/:/usr/share/nginx/logs
     ports:
       - "5000:5000"
     environment:
